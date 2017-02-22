@@ -3,6 +3,7 @@
  */
 package com.suren.mbr.d2io.config;
 
+import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -22,7 +23,7 @@ public class Consumer {
 		return cfgMap;
 	}
 	public void setCfgMap(Map<String, String> cfgMap) {
-		this.cfgMap = cfgMap;
+		this.cfgMap = Collections.unmodifiableMap(cfgMap);
 	}
 	@Override
 	public String toString() {

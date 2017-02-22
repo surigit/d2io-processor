@@ -3,6 +3,8 @@
  */
 package com.suren.mbr.d2io.config;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -16,11 +18,17 @@ public class D2IOConfig {
 	private Consumer consumer;
 
 	public Map<String, String> getEngine() {
+		if(null == engine){
+			return Collections.unmodifiableMap(new HashMap<String,String>());
+		}
 		return engine;
 	}
 
 	public void setEngine(Map<String, String> engine) {
-		this.engine = engine;
+		if(engine == null){
+			this.engine = Collections.unmodifiableMap(new HashMap<String,String>());
+		}
+		this.engine = Collections.unmodifiableMap(engine);
 	}
 
 	
