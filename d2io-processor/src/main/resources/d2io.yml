@@ -1,0 +1,35 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   E N G I N E      C O N F I G U R A T I O N 
+#--------------------------------------------------------------------
+engine:
+ #Number of Consumer Threads
+ threads: 2
+ #The Buffer limit.
+ #e.g. Actual Buffer = bufferLimit x threads
+ # value 2 for Buffer Limit means = 2 x thread count (2) = 4 items in buffer
+ bufferLimit: 2
+ #Optional: If Commented, the default Listener will still be added.
+ listener: com.suren.mbr.d2io.intf.impl.DefaultD2IOListener 
+ #Optional: Reporting status periodically in seconds.
+ listenerPollInterval: 2
+ 
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#  P R O D U C E R      C O N F I G U R A T I O N 
+#--------------------------------------------------------------------
+
+producer:
+ clazz: com.suren.mbr.d2io.samples.LoadSampleDatasource
+ cfgMap:
+  rows: 100
+  key2: value2
+   
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#  C O N S U M E R      C O N F I G U R A T I O N 
+#--------------------------------------------------------------------
+
+consumer:
+ clazz: com.suren.mbr.d2io.samples.ExternalCallBackImpl
+ cfgMap: 
+  delayInMillis: 100
+  key2: value2 
+ 
