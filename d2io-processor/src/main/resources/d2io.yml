@@ -19,6 +19,8 @@ engine:
 
 producer:
  clazz: com.suren.mbr.d2io.samples.LoadSampleDatasource
+ # The entries under the cfgMap will be sent as a Map to the Producer data source implementation
+ # The end user can add any key / value pairs 
  cfgMap:
   rows: 100
   key2: value2
@@ -29,6 +31,8 @@ producer:
 
 consumer:
  clazz: com.suren.mbr.d2io.samples.ExternalCallBackImpl
+ # The entries under the cfgMap will be sent as a Map to the Consumer Call back implementation
+ # The end user can add any key / value pairs 
  cfgMap: 
   delayInMillis: 100
   key2: value2 
