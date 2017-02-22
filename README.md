@@ -35,6 +35,9 @@ b) A database needs to be read 60K rows and each row needs to be processed witho
 c) Ability to concurrently process the Inbound entries.
 d) The Consumer call back needs to send the inbound record to an external resource like a database, JMS Q, REST/SOAP service etc
 
+# Configuration
+ The d2io.yml file as available in the src/main/resources is self-explanatory. 
+
 # Installation 
 a) Download and Import into your eclipse workspace.
 b) Apache Maven 3.2.1 and higher must be installed
