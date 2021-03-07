@@ -56,7 +56,7 @@ f) run the following from your command line
 2) Missing Configuration and Error Scenarios were also tested
 
 # Contributors
-a) Suggestions are welcome. So far I am the single contributor 
+a) Suggestions are welcome.
 
 # License
 Apache Open License
